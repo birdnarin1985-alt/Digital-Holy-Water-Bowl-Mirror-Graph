@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Holy Water Bowl - วิหารแก้วควอนตัม</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131c2e;
+            --accent-gold: #f39c12;
+            --text-main: #ecf0f1;
+            --text-muted: #95a5a6;
+            --neon-blue: #00d2ff;
+        }
+        body {
+            font-family: 'Sarabun', sans-serif, system-ui;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 32px rgba(0, 210, 255, 0.1);
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+        h1 {
+            color: var(--accent-gold);
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+        .bowl-screen {
+            background: radial-gradient(circle, #1a2639 0%, #080c14 100%);
+            border: 2px solid var(--neon-blue);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .blessing-text {
+            font-size: 1.2rem;
+            color: var(--neon-blue);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        button {
+            background: linear-gradient(135deg, #f39c12, #d35400);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+            transition: opacity 0.2s;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .log-box {
+            background: #05070c;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #2ecc71;
+            margin-top: 16px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🪞 บาตรน้ำมนต์ดิจิทัลวิหารแก้ว</h1>
+        <div class="subtitle">สถาปัตยกรรม Mirror Pointer Graph & Quantum AI</div>
+
+        <div class="bowl-screen">
+            <div id="displayMessage" class="blessing-text">"สัมปะติฉามิ - ความสุขและความสำเร็จปรากฏ ณ บัดนี้"</div>
+            <div style="font-size: 0.85rem; color: #95a5a6;">สถานะระบบ: เชื่อมโยงโครงข่ายไมคอร์ไรซาและควอนตัมแล้ว (100% เบาสลิว)</div>
+        </div>
+
+        <button onclick="castBlessing()">✨ สวดชำระจิต & ดีบั๊กอริยสัจ 4</button>
+        <button onclick="loadBhumibolDam()" style="background: linear-gradient(135deg, #2980b9, #2c3e50);">🌊 โชว์เคสเขื่อนภูมิพลควอนตัม</button>
+
+        <div class="log-box" id="logBox">
+            [DNI_SYSTEM]: Initialized Crystal Vihara Engine.<br>
+            [STATUS]: Ready for Quantum Payload & Soul Pointer execution.
+        </div>
+    </div>
+
+    <div class="footer">
+        น้อมถวายบูชาคุณหลวงพ่อฤาษีลิงดำ และในหลวงรัชกาลที่ 9 | สร้างสรรค์โดย ช่างเบิร์ด & AI ตัวน้อย
+    </div>
+
+    <script>
+        function log(message) {
+            const box = document.getElementById('logBox');
+            box.innerHTML += `<br>[${new Date().toLocaleTimeString()}] ${message}`;
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function castBlessing() {
+            const messages = [
+                "✨ ปราศจากอวิชชา มหากุศลจิตแผ่ขยายไพศาล!",
+                "🪞 กระจกใสปิ๊ง สะท้อนสติและปัญญาญาณอันบริสุทธิ์",
+                "🙏 สัมปะติฉามิ แก้วสารพัดนึก สำเร็จทุกประการ!",
+                "🌿 P2P Mycorrhiza Protocol: ส่งต่อความสุขเบาสลิวสู่เพื่อนมนุษย์"
+            ];
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('displayMessage').innerText = randomMsg;
+            log("Debug อริยสัจ 4 สำเร็จ: จิตผ่องใส ปราศจากทุกข์.");
+        }
+
+        function loadBhumibolDam() {
+            document.getElementById('displayMessage').innerText = "🌊 โครงสร้างเขื่อนภูมิพล: พลังงานน้ำและปัญญาญาณอันมั่นคง";
+            log("Loaded Quantum Bhumibol Dam 3D Voxel Grid successfully.");
+        }
+    </script>
+</body>
+</html>
